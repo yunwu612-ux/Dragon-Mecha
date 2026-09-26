@@ -1,39 +1,17 @@
-# 龙兽机甲工坊 V1.0
+# 龙兽机甲工坊 Android V1.1
 
-一个轻量的 Android 龙兽人 × 机甲组装小游戏。
+V1.1 在 V1.0 基础上加入：
+- 4 名龙兽人：新增岩甲龙
+- 20 个基础机甲部件：每个部位 4 个
+- 基础组合数量从 243 提升到 1024
+- 机甲仓库加入底部导航，可直接查看全部部件
+- 自动保存驾驶者、五个机甲部件、胜场和金币
+- 训练战胜利奖励 30 金币
+- 战斗血量提升、奖励提示与状态优化
+- 顶部版本号升级为 V1.1
+- 保持 Jetpack Compose + Material 3，适配 Android 8.0（API 26）及以上
 
-## V1.0 功能
+## GitHub Actions
+推送到 `main` 或手动运行 Actions 的 `Build DragonMechaWorkshop APK` 即可构建 Debug APK。
 
-- 主菜单
-- 3 名初始龙兽人
-- 龙兽人选择
-- 机甲组装
-- 头部 / 身体 / 左臂 / 右臂 / 腿部自由搭配
-- 部件属性
-- 装备 / 卸下
-- 自动计算机甲属性
-- 机甲仓库
-- 简单回合制战斗
-- 胜负结算
-- 基础页面动效
-- 横屏 / 竖屏
-- GitHub Actions 自动 Build APK
-
-## 初始龙兽人
-
-- 赤焰龙：强攻型
-- 鲨龙：重装型
-- 雷翼龙：机动型
-
-## 构建
-
-GitHub -> Actions -> Build DragonMechaWorkshop APK -> Run workflow。
-
-成功后在 Artifacts 下载 `DragonMechaWorkshop-V1.0`。
-
-## 后续版本
-
-V1.1：更多龙兽人与机甲零件  
-V1.2：强化 / 改造系统  
-V1.3：剧情与 Boss  
-V2.0：更完整的机甲战斗系统
+APK 输出：`app/build/outputs/apk/debug/app-debug.apk`
