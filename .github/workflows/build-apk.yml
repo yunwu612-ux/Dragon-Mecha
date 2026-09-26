@@ -1,4 +1,4 @@
-name: Build DragonMechaWorkshop APK
+name: Build DragonMechaWorkshop V1.1 APK
 
 on:
   workflow_dispatch:
@@ -29,9 +29,11 @@ jobs:
       - name: Verify project version
         shell: bash
         run: |
-          grep -q 'versionName = "1.0"' app/build.gradle.kts
-          grep -q 'versionCode = 1' app/build.gradle.kts
-          echo "DragonMechaWorkshop V1.0 source verification passed."
+          set -e
+          echo "Checking Android project version..."
+          grep -q 'versionName = "1.1"' app/build.gradle.kts
+          grep -q 'versionCode = 2' app/build.gradle.kts
+          echo "DragonMechaWorkshop V1.1 source verification passed."
 
       - name: Build Debug APK
         run: gradle :app:assembleDebug --no-daemon
@@ -39,6 +41,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: DragonMechaWorkshop-V1.0
+          name: DragonMechaWorkshop-V1.1
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
